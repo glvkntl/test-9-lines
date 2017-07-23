@@ -1,0 +1,141 @@
+.page
+	max-width: 660px
+	background: #fff url("../images/bg-page.jpg") repeat-y
+	margin: 0 auto
+	@include breakpoint(medium)
+		margin: 60px auto
+
+.form-section
+	border-bottom: 1px solid #f0f0f0
+	padding: 20px
+
+.holder
+	&:after
+		display: block
+		clear: both
+		content: ''
+
+.photo
+	width: 138px
+	height: 138px
+	margin: 0 auto 20px
+	img
+		border-radius: 50%
+	@include breakpoint(medium)
+		float: left
+		margin: 0 23px 0 0
+
+.personal-info
+	@include breakpoint(medium)
+		width: calc(100% - 161px)
+		float: left
+		position: relative
+		&:after
+			background: url("../images/approved.png") no-repeat
+			position: absolute
+			right: -16px
+			bottom: -12px
+			width: 184px
+			height: 166px
+			content: ''
+
+.form-row
+	border-bottom: 2px solid #333
+	margin-bottom: 20px
+	input[type="text"]
+		background: none
+		border: 0
+		margin: 0
+		padding: 7px 0
+		height: auto
+		color: #666
+		font: 500 12px/16px $font-family-main
+		box-shadow: none
+		@include breakpoint(medium)
+			padding-right: 170px
+
+.ttl
+	display: block
+	font: 500 18px/24px $font-family-main
+	margin-bottom: 20px
+	color: #010101
+
+.skills-wrap
+	display: flex
+	flex-wrap: wrap
+	margin-bottom: -40px
+
+.skill
+	position: relative
+	width: 50%
+	margin-bottom: 40px
+	@include breakpoint(medium)
+		width: 25%
+	input[type="checkbox"]
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0
+	label
+		padding-left: 24px
+		text-transform: uppercase
+		font: 500 12px/16px $font-family-main
+		color: #666
+		&:before
+			width: 19px
+			height: 19px
+			border-radius: 3px
+			position: absolute
+			left: 0
+			top: 3px
+			background: #eee
+			content: ''
+		&:after
+			width: 11px
+			height: 5px
+			border-left: 1px solid #fff
+			border-bottom: 1px solid #fff
+			transform: rotate(-45deg)
+			position: absolute
+			top: 8px
+			left: 4px
+
+input[type="checkbox"]:checked + label:before
+	background: #0093d7
+
+input[type="checkbox"]:checked + label:after
+	content: ''
+
+.flex-wrap
+	padding: 50px 20px
+	text-align: center
+	@include breakpoint(medium)
+		display: flex
+		flex-direction: row-reverse
+		justify-content: flex-end
+		text-align: left
+
+.score-box
+	background: url("../images/bg-score.png") no-repeat
+	width: 254px
+	height: 128px
+	margin: 0 auto
+	position: relative
+	@include breakpoint(medium)
+		margin: 0 67px 0 0
+
+.score-arrow
+	position: absolute
+	bottom: -7px
+	left: 50%
+	margin-left: -59px
+	transition: all 3s ease
+	transform: rotate(0deg)
+	transform-origin: calc(100% - 9px) 50%
+
+.numbers-box
+	margin: 0 0 20px
+
+.score
+	font: 900 50px/54px $font-family-main
+	color: #0093d7

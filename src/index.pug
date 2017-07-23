@@ -1,6 +1,5 @@
 include pug/project-settings.pug
 include pug/mixins/mixins.pug
-
 doctype html
 html
 	head(lang="en")
@@ -11,29 +10,26 @@ html
 		.page
 			form(action="#")
 				fieldset
-					section
+					section.form-section.holder
 						.photo
 							img(src="images/photo.jpg", alt="Nataliia Golovko")
 						.personal-info
-							each field in ['Имя', 'Дата рождения', 'Город', 'Контактные данные']
+							each fields in [{field: 'ИМЯ', info: 'НАТАЛЬЯ'}, {field: 'ДАТА РОЖДЕНИЯ', info: '27.02.1988'}, {field: 'ГОРОД', info: 'ХАРЬКОВ'}, {field: 'КОНТАКТНЫЕ ДАННЫЕ', info: 'Skype: glvkntl'}]
 								.form-row
-									input(type="text", placeholder=field)
-					section
+									input(type="text", placeholder=fields.field, value=fields.info)
+					section.form-section
 						strong.ttl Навыки
 						.skills-wrap
-							each val in ['html5', 'sass', 'vanillajs', 'git', 'css3', 'less', 'angular', 'foundation', 'бэм', 'gulp', 'jquery', 'bootstrap']
-								.skill
-									input(type="checkbox", name="skills", id=val)
-									label(for=val)= val
-					section
-						.score-box
-							img(src="images/score-arrow.png" alt="Arrow")
+							each qual in [{val:'html5', check: true}, {val: 'sass', check: true}, {val: 'vanillajs', check: true, grade: 'js-item'}, {val: 'git', check: true}, {val: 'css3', check: true}, {val: 'less', check: true}, {val: 'angular', grade: 'js-item'}, {val: 'foundation'}, {val: 'бэм'}, {val: 'gulp', check: true}, {val: 'jquery', check: true, grade: 'js-item'}, {val: 'bootstrap', check: true}]
+								.skill(class=qual.grade)
+									input(type="checkbox", name="skills", id=qual.val, checked=qual.check)
+									label(for=qual.val)= qual.val
+					section.form-section.flex-wrap
 						.numbers-box
-							strong.ttl Мой уровень владения Java Script
+							strong.ttl Мой уровень владения
+								br
+								| Java Script
 							.score 0
-
-
-
-
-
+						.score-box
+							img.score-arrow(src="images/score-arrow.png" alt="Arrow")
 		include pug/scripts.pug

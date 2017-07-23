@@ -12,50 +12,50 @@
     <div class="page">
       <form action="#">
         <fieldset>
-          <section>
+          <section class="form-section holder">
             <div class="photo"><img src="images/photo.jpg" alt="Nataliia Golovko"></div>
             <div class="personal-info">
               <div class="form-row">
-                <input type="text" placeholder="Имя">
+                <input type="text" placeholder="ИМЯ" value="НАТАЛЬЯ">
               </div>
               <div class="form-row">
-                <input type="text" placeholder="Дата рождения">
+                <input type="text" placeholder="ДАТА РОЖДЕНИЯ" value="27.02.1988">
               </div>
               <div class="form-row">
-                <input type="text" placeholder="Город">
+                <input type="text" placeholder="ГОРОД" value="ХАРЬКОВ">
               </div>
               <div class="form-row">
-                <input type="text" placeholder="Контактные данные">
+                <input type="text" placeholder="КОНТАКТНЫЕ ДАННЫЕ" value="Skype: glvkntl">
               </div>
             </div>
           </section>
-          <section><strong class="ttl">Навыки</strong>
+          <section class="form-section"><strong class="ttl">Навыки</strong>
             <div class="skills-wrap">
               <div class="skill">
-                <input type="checkbox" name="skills" id="html5">
+                <input type="checkbox" name="skills" id="html5" checked>
                 <label for="html5">html5</label>
               </div>
               <div class="skill">
-                <input type="checkbox" name="skills" id="sass">
+                <input type="checkbox" name="skills" id="sass" checked>
                 <label for="sass">sass</label>
               </div>
-              <div class="skill">
-                <input type="checkbox" name="skills" id="vanillajs">
+              <div class="skill js-item">
+                <input type="checkbox" name="skills" id="vanillajs" checked>
                 <label for="vanillajs">vanillajs</label>
               </div>
               <div class="skill">
-                <input type="checkbox" name="skills" id="git">
+                <input type="checkbox" name="skills" id="git" checked>
                 <label for="git">git</label>
               </div>
               <div class="skill">
-                <input type="checkbox" name="skills" id="css3">
+                <input type="checkbox" name="skills" id="css3" checked>
                 <label for="css3">css3</label>
               </div>
               <div class="skill">
-                <input type="checkbox" name="skills" id="less">
+                <input type="checkbox" name="skills" id="less" checked>
                 <label for="less">less</label>
               </div>
-              <div class="skill">
+              <div class="skill js-item">
                 <input type="checkbox" name="skills" id="angular">
                 <label for="angular">angular</label>
               </div>
@@ -68,24 +68,24 @@
                 <label for="бэм">бэм</label>
               </div>
               <div class="skill">
-                <input type="checkbox" name="skills" id="gulp">
+                <input type="checkbox" name="skills" id="gulp" checked>
                 <label for="gulp">gulp</label>
               </div>
-              <div class="skill">
-                <input type="checkbox" name="skills" id="jquery">
+              <div class="skill js-item">
+                <input type="checkbox" name="skills" id="jquery" checked>
                 <label for="jquery">jquery</label>
               </div>
               <div class="skill">
-                <input type="checkbox" name="skills" id="bootstrap">
+                <input type="checkbox" name="skills" id="bootstrap" checked>
                 <label for="bootstrap">bootstrap</label>
               </div>
             </div>
           </section>
-          <section>
-            <div class="score-box"><img src="images/score-arrow.png" alt="Arrow"></div>
-            <div class="numbers-box"><strong class="ttl">Мой уровень владения Java Script</strong>
+          <section class="form-section flex-wrap">
+            <div class="numbers-box"><strong class="ttl">Мой уровень владения<br>Java Script</strong>
               <div class="score">0</div>
             </div>
+            <div class="score-box"><img class="score-arrow" src="images/score-arrow.png" alt="Arrow"></div>
           </section>
         </fieldset>
       </form>
